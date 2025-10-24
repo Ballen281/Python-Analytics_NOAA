@@ -70,11 +70,11 @@ Data Analysis Project NOAA Strikes.ipynb
 
 ##  Analysis Workflow
 
-This section outlines the key steps performed in the lightning strikes analysis process — from loading the data to visualizing the final insights.
+This section outlines the key steps performed in the lightning strikes analysis process,  from loading the data to visualizing the final insights.
 
 ---
 
-###  Step 1 — Import Required Libraries
+###  Step 1,  Import Required Libraries
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -83,7 +83,7 @@ import datetime as dt
 
 ---
 
-###  Step 2 — Load the Dataset
+###  Step 2 ,  Load the Dataset
 ```python
 df = pd.read_csv("lightening strikes dataset.csv")
 df.head()
@@ -91,7 +91,7 @@ df.head()
 
 ---
 
-###  Step 3 — Convert Dates and Extract Month Information
+###  Step 3 ,  Convert Dates and Extract Month Information
 ```python
 df['date'] = pd.to_datetime(df['date'])
 df['month'] = df['date'].dt.month
@@ -100,7 +100,7 @@ df['month_txt'] = df['date'].dt.month_name().str.slice(stop=3)
 
 ---
 
-###  Step 4 — Group and Aggregate Data
+###  Step 4 ,  Group and Aggregate Data
 ```python
 df_by_month = (
     df.groupby(['month', 'month_txt'])
@@ -112,7 +112,7 @@ df_by_month = (
 
 ---
 
-###  Step 5 — Visualize Monthly Lightning Strikes
+###  Step 5 ,  Visualize Monthly Lightning Strikes
 ```python
 plt.bar(
     x=df_by_month['month_txt'],
@@ -128,7 +128,7 @@ plt.show()
 
 ---
 
-###  Step 6 — Interpret Results
+###  Step 6 ,  Interpret Results
 The resulting bar chart highlights which months experienced the highest lightning activity, revealing clear seasonal patterns.
 
 Example chart placeholder:
@@ -170,4 +170,4 @@ If you have ideas for better visualizations or data sources, feel free to open a
 📧 [b.d.allen512@gmail.com]  
 💼 [https://www.linkedin.com/in/darrius-allen-247472b4/]
 
-> “Data reveals the rhythms of nature — even in lightning.”
+> “Data reveals the rhythms of nature,  even in lightning.”
